@@ -642,26 +642,16 @@
        xml:space="preserve"
        transform="matrix(1.3333333,0,0,1.3333333,10682.836,370.68747)"><tspan
          id="tspan100"
-         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:72px;font-family:'Arial Rounded MT Bold';writing-mode:lr-tb;fill:#fffcf2;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0"
-         y="0">Lets learn a</tspan></text>
-    <text
-       id="text101"
-       xml:space="preserve"
-       transform="matrix(1.3333333,0,0,1.3333333,11160.809,370.68747)"><tspan
-         id="tspan101"
-         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:72px;font-family:'Arial Rounded MT Bold';writing-mode:lr-tb;fill:#fffcf2;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="0"
-         y="0">bout the </tspan><tspan
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:72px;font-family:’Arial Rounded MT Bold’;writing-mode:lr-tb;fill:#fffcf2;fill-opacity:1;fill-rule:nonzero;stroke:none;text-anchor:middle"
+         x="240"
+         y="0">Lets learn about the</tspan><tspan
          id="tspan102"
-         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:72px;font-family:'Arial Rounded MT Bold';writing-mode:lr-tb;fill:#fffcf2;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="-446.88959"
-         dx="0 0 0 0 0 0 -2.7432001 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.7927999 0 -1.7568001"
-         y="86.400002">SIX F’s on how to treat </tspan><tspan
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:72px;font-family:’Arial Rounded MT Bold’;writing-mode:lr-tb;fill:#fffcf2;fill-opacity:1;fill-rule:nonzero;stroke:none;text-anchor:middle"
+         x="240"
+         y="86.400002">SIX F’s on how to treat</tspan><tspan
          id="tspan103"
-         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:72px;font-family:'Arial Rounded MT Bold';writing-mode:lr-tb;fill:#fffcf2;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         x="-320.5296"
-         dx="0 -0.95039999"
+         style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:72px;font-family:’Arial Rounded MT Bold’;writing-mode:lr-tb;fill:#fffcf2;fill-opacity:1;fill-rule:nonzero;stroke:none;text-anchor:middle"
+         x="240"
          y="172.8">your emotions!</tspan></text>
     <path
        id="path103"
