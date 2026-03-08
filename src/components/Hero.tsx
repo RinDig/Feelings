@@ -16,11 +16,11 @@ export function Hero() {
       <div className="hero-wash hero-wash-2" aria-hidden="true" />
       <div className="hero-wash hero-wash-3" aria-hidden="true" />
       <div className="hero-content">
-        <p className="hero-eyebrow">An Internal Family Systems Story</p>
+        <p className="hero-eyebrow">A Visual Story</p>
         <h1 className="hero-title">
-          <span className="hero-word">All</span>
-          <span className="hero-word">The</span>
-          <span className="hero-word hero-word-accent">Feels</span>
+          <span className="hero-word">Internal</span>
+          <span className="hero-word">Family</span>
+          <span className="hero-word hero-word-accent">Systems</span>
         </h1>
         <p className="hero-body">
           Six emotion characters live inside all of us.

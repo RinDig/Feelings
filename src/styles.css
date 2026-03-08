@@ -313,15 +313,8 @@ a, button, [role="button"], input, select, textarea { cursor: pointer; }
 
 /* ---- Spacers ---- */
 .frame-spacer {
-  position: relative; height: var(--frame-gap);
-  display: flex; align-items: center; justify-content: center;
-  overflow: hidden; z-index: 2;
+  height: var(--frame-gap);
 }
-.frame-spacer-line {
-  width: 1px; height: 60%; border-radius: 1px;
-  opacity: 0; transition: opacity .6s ease;
-}
-.frame-spacer.visible .frame-spacer-line { opacity: 1; }
 
 /* ---- Character stages ---- */
 .character-stage {
@@ -363,6 +356,118 @@ a, button, [role="button"], input, select, textarea { cursor: pointer; }
 .interstitial p {
   font-size: clamp(15px, 2vw, 17px); line-height: 1.75;
   color: var(--text-soft); font-weight: 400;
+}
+
+/* ============================================================
+   IFS BLURB (speech bubble style)
+   ============================================================ */
+.ifs-blurb {
+  position: relative; z-index: 2;
+  max-width: 640px; margin: 0 auto;
+  padding: 40px 24px 80px;
+  opacity: 0; transform: translateY(30px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.ifs-blurb.visible { opacity: 1; transform: translateY(0); }
+
+.ifs-blurb-bubble {
+  position: relative;
+  background: rgba(255,252,242,.85);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-radius: 28px;
+  padding: 40px 36px 32px;
+  box-shadow: 0 4px 24px rgba(44,39,34,.06), 0 16px 48px rgba(44,39,34,.08);
+  border: 1px solid rgba(228,221,208,.5);
+}
+.ifs-blurb-tail {
+  position: absolute;
+  bottom: -16px; left: 50%; transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 18px solid rgba(255,252,242,.85);
+  filter: drop-shadow(0 2px 3px rgba(44,39,34,.06));
+}
+.ifs-blurb-title {
+  font-family: var(--display);
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--c-joy), var(--c-anger), var(--c-fear));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.ifs-blurb-bubble p {
+  font-family: var(--body);
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.8;
+  color: var(--text-soft);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.ifs-blurb-bubble p:last-of-type { margin-bottom: 20px; }
+.ifs-blurb-bubble em { color: var(--text); font-style: italic; }
+.ifs-blurb-bubble strong { color: var(--text); font-weight: 600; }
+
+.ifs-highlight {
+  font-weight: 600; padding: 1px 6px; border-radius: 6px;
+}
+.ifs-highlight.anger { color: #c9504e; background: rgba(250,128,125,.12); }
+.ifs-highlight.sadness { color: #5a9ab5; background: rgba(166,217,242,.15); }
+.ifs-highlight.fear { color: #8a6fb0; background: rgba(227,201,255,.15); }
+.ifs-highlight.anxiety { color: #b88a5e; background: rgba(255,217,189,.18); }
+
+.ifs-blurb-orbs {
+  display: flex; gap: 8px; justify-content: center;
+}
+.ifs-blurb-orbs span {
+  width: 10px; height: 10px; border-radius: 50%; opacity: .5;
+}
+
+/* ============================================================
+   VIDEO SECTION
+   ============================================================ */
+.video-section {
+  position: relative; z-index: 2;
+  max-width: 900px; margin: 0 auto;
+  padding: 60px 24px 80px;
+  opacity: 0; transform: translateY(30px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.video-section.visible { opacity: 1; transform: translateY(0); }
+
+.video-section-header {
+  text-align: center; margin-bottom: 32px;
+}
+.video-section-header h2 {
+  font-family: var(--display);
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 600; margin-bottom: 8px;
+  color: var(--text);
+}
+.video-section-header p {
+  font-family: var(--body);
+  font-size: clamp(14px, 2vw, 16px);
+  color: var(--text-faint);
+}
+
+.video-wrapper {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(44,39,34,.1), 0 24px 64px rgba(44,39,34,.08);
+  background: #1a1714;
+}
+.video-wrapper::after {
+  content: ''; position: absolute; inset: 0;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,252,242,.08);
+  pointer-events: none;
+}
+.video-player {
+  display: block; width: 100%; height: auto;
+  border-radius: var(--radius);
 }
 
 /* ============================================================

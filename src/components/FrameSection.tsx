@@ -47,7 +47,7 @@ export function FrameSection({ index, color, children }: FrameSectionProps) {
             {index + 1}
           </div>
           <img
-            src={`/slides/slide-${num}.svg`}
+            src={`${import.meta.env.BASE_URL}slides/slide-${num}.svg`}
             alt={`Storyboard frame ${index + 1}`}
             className="frame-img"
             draggable={false}

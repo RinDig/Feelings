@@ -8,6 +8,8 @@ import { FrameSection } from "./components/FrameSection";
 import { FrameSpacer } from "./components/FrameSpacer";
 import { CharacterSpot } from "./components/CharacterSpot";
 import { CharacterScene } from "./components/CharacterSpot";
+import { IfsBlurb } from "./components/IfsBlurb";
+import { VideoSection } from "./components/VideoSection";
 import { useCursorGlow } from "./hooks/useCursorGlow";
 import "./styles.css";
 
@@ -29,9 +31,9 @@ export default function App() {
   const frames: React.ReactNode[] = [];
 
   for (let i = 0; i < TOTAL; i++) {
-    // Spacer before each frame (except first)
+    // Invisible spacer between frames
     if (i > 0) {
-      frames.push(<FrameSpacer key={`spacer-${i}`} color={COLORS[i]} />);
+      frames.push(<FrameSpacer key={`spacer-${i}`} />);
     }
 
     // Character scenes at specific story beats
@@ -48,7 +50,6 @@ export default function App() {
           <p>Each one has a purpose. Each one deserves to be heard.</p>
         </CharacterScene>
       );
-      frames.push(<FrameSpacer key="spacer-scene-1" color="#a5e59a" />);
     }
 
     if (i === 17) {
@@ -65,7 +66,6 @@ export default function App() {
           <p>The scared part just needs to know you won't leave.</p>
         </CharacterScene>
       );
-      frames.push(<FrameSpacer key="spacer-scene-2" color="#e3c9ff" />);
     }
 
     if (i === 15) {
@@ -82,7 +82,6 @@ export default function App() {
           <p>...is a part that just needed to be held.</p>
         </CharacterScene>
       );
-      frames.push(<FrameSpacer key="spacer-scene-3" color="#fa807d" />);
     }
 
     // The slide frame
@@ -95,16 +94,6 @@ export default function App() {
             bottom="10%"
             scale={0.6}
             width="160px"
-          />
-        )}
-        {i === 7 && (
-          <CharacterSpot
-            emotion="fear"
-            left="-70px"
-            top="20%"
-            scale={0.5}
-            width="140px"
-            flipX
           />
         )}
         {i === 13 && (
@@ -142,7 +131,9 @@ export default function App() {
       <ProgressTrack />
       <ChapterNav currentFrame={currentFrame} total={TOTAL} />
       <Hero />
+      <IfsBlurb />
       <main id="frames">{frames}</main>
+      <VideoSection />
       <Footer />
     </>
   );
